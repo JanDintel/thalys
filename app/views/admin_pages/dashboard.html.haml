@@ -1,4 +1,27 @@
-%h1
-  Welcome back!
+.row
+  .small-12.small-centered
+    %h1
+      Welcome back!
 
-= link_to 'Create a new post', new_post_path
+    = link_to 'Create a new post', new_post_path, class: 'button'
+
+.row
+  .small-12.small-centered
+    %table
+      %thead
+        %tr
+          %th Title
+          %th Content
+          %th Edit
+          %th Delete
+      %tbody
+        - @posts.each do |post|
+          %tr
+            %td 
+              = post.title
+            %td 
+              = truncate(post.content)
+            %td
+              = link_to 'Edit', nil
+            %td
+              = link_to 'Delete', nil

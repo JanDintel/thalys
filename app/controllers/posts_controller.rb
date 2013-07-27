@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, only: [:new]
+  before_filter :authenticate_user!, only: [:new, :created]
 
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at DESC")
   end
 
   def show
