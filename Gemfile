@@ -10,13 +10,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'haml'
+gem 'devise'
+gem 'zurb-foundation', '~> 4.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-gem 'devise'
 
 group :development, :test do
   gem 'guard-rspec'

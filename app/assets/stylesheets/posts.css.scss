@@ -1,3 +1,37 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+a {
+  color: #EF4423;
+  font-weight: 100;
+}
+
+.heading {
+  background: url(header.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+.blogtitle {
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  position: relative;
+  top: 50%;
+  font-size: 3em;
+}
+
+.post_content {
+  font-size: 1.3em;
+  font-weight: 300;
+}
