@@ -1,4 +1,9 @@
+%br
+%br
+
 %h1
   = link_to post.title, post_path(post)
+.post_date
+  = post.created_at.to_formatted_s(:short_ordinal)
 .post_content
   = post.content

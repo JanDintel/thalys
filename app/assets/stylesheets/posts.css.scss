@@ -1,15 +1,18 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans:300|Josefin+Sans:100);
 
 h1 {
+  font-family: 'Open Sans';
   font-weight: 300;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 }
 
 a {
   color: #EF4423;
-  font-weight: 100;
+  font-weight: 300;
+  font-size: 0.9em;
 }
 
 .heading {
@@ -23,6 +26,7 @@ a {
 }
 
 .blogtitle {
+  font-family: 'Josefin Sans';
   text-align: center;
   color: #fff;
   font-weight: 100;
@@ -31,7 +35,14 @@ a {
   font-size: 3em;
 }
 
+.post_date {
+  font-family: 'Open Sans';
+  color: #CFCFCF;
+}
 .post_content {
-  font-size: 1.3em;
-  font-weight: 300;
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-family: 'Droid Sans';
+  color: #555;
+  line-height: 24px;
 }
