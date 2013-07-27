@@ -1,11 +1,29 @@
 Given(/^I have an account$/) do
-  user = FactoryGirl.create(:user)
+  @user = FactoryGirl.create(:user)
 end
 
 When(/^I sign in$/) do
-  pending # express the regexp above with the code you wish you had
+  visit new_user_session_path
+  fill_in 'Email', with: @user.email
+  fill_in 'Password', with: 'theforce'
+  click_on 'Sign in'
 end
 
 Then(/^I see the dashboard$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content('Welcome back!')
+end
+
+Given(/^I am on the dashboard$/) do
+  FactoryGirl.create(:user)
+  visit new_user_session_path
+  fill_in 'Email', with: 'test@new.com'
+  fill_in 'Password', with: 'theforce'
+  click_on 'Sign in'
+end
+
+Then(/^I can create a new post$/) do
+  click_on 'Create a new post'
+  fill_in 'post_title', with: 'First post!'
+  fill_in 'post_content', with: 'Content'
+  click_on 'Create'
 end
