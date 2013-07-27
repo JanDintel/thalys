@@ -188,6 +188,8 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    shoulda-matchers (2.2.0)
+      activesupport (>= 3.0.0)
     slop (3.4.6)
     spork (1.0.0rc3)
     sprockets (2.10.0)
@@ -229,7 +231,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
-  factory_girl_rails
+  factory_girl_rails (~> 4.0)
   guard-livereload
   guard-rspec
   guard-spork
@@ -241,6 +243,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   selenium-webdriver (= 2.0.0)
+  shoulda-matchers
   spork-rails!
   sqlite3
   turbolinks
