@@ -16,12 +16,12 @@
           %th Delete
       %tbody
         - @posts.each do |post|
-          %tr
+          %tr{ id: post.id }
             %td 
               = post.title
             %td 
               = truncate(post.content)
             %td
-              = link_to 'Edit', nil
+              = link_to 'Edit', edit_post_path(post.id)
             %td
-              = link_to 'Delete', nil
+              = link_to 'Delete', post_path(post.id), method: :delete

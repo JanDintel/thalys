@@ -6,4 +6,4 @@
 .post_date
   = post.created_at.to_formatted_s(:short_ordinal)
 .post_content
-  = post.content
+  = markdown.render(post.content).html_safe

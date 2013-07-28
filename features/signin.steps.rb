@@ -27,3 +27,20 @@ Then(/^I can create a new post$/) do
   fill_in 'post_content', with: 'Content'
   click_on 'Create'
 end
+
+Then(/^I can edit a blog post$/) do
+  within('tr#1') do 
+    click_on "Edit"
+  end
+  fill_in 'post_title', with: 'First changed post!'
+  fill_in 'post_content', with: 'Different content!'
+  click_on 'Update'
+  expect(page).to have_content('Different')
+end
+
+Then(/^I can delete a blog post$/) do
+  within('tr#1') do 
+    click_on 'Delete'
+  end
+  expect(Post.count).to be 4
+end

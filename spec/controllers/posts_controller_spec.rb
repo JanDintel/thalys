@@ -29,6 +29,7 @@ describe PostsController do
 
   context 'logged in' do
     let(:user) { FactoryGirl.create(:user) }
+    let(:a_post) { FactoryGirl.create(:post) }
     before { sign_in user }
 
     describe '#new' do
@@ -42,6 +43,27 @@ describe PostsController do
       it 'creates a new post' do
         post :create, post: { title: 'test', content: 'test' }
         expect(Post.count).to be 1
+      end
+    end
+
+    describe '#edit' do
+      it 'edits a post' do
+        get :edit, id: a_post.id
+        expect(response).to be_success
+      end
+    end
+
+    describe '#update' do
+      it 'updates a post' do
+        patch :edit, id: a_post.id, post: { title: 'different', content: 'changed.' }
+        expect(response).to be_success
+      end
+    end
+
+    describe '#destroy' do
+      it 'deletes a post' do
+        delete :destroy, id: a_post.id
+        expect(Post.count).to be 0
       end
     end
   end

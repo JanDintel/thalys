@@ -25,6 +25,33 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      flash[:notice] = 'Post updated.'
+      redirect_to @post
+    else
+      flash[:alert] = 'Post not updated: something went wrong.'
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+
+    if @post.delete
+      flash[:notice] = 'Post deleted.'
+      redirect_to dashboard_path
+    else
+      flash[:alert] = 'Post not deleted. Something went wrong.'
+      redirect_to dashboard_path
+    end
+  end
   private
 
     def post_params
