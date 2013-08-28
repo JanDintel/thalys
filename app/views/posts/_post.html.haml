@@ -7,3 +7,11 @@
   = post.created_at.to_formatted_s(:short_ordinal)
 .post_content
   = markdown.render(post.content).html_safe
+
+.post_comment
+  = link_to 'Comments', nil
+.post_links
+  = render 'post_links'
+%br
+%br
+%br

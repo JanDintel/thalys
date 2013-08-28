@@ -4,6 +4,7 @@ Thalys::Application.routes.draw do
   resources :posts
 
   get '/dashboard' => 'admin_pages#dashboard', as: 'dashboard'
+  get '/settings' => 'admin_pages#settings', as: 'settings'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

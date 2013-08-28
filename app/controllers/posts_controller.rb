@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order("created_at DESC")
+    Properties.first ? @blogname = Properties.first.name : @blogname = ''
   end
 
   def show
@@ -52,9 +53,10 @@ class PostsController < ApplicationController
       redirect_to dashboard_path
     end
   end
+  
   private
 
     def post_params
-      params.require(:post).permit(:id, :title, :content)
+      params.require(:post).permit(:title, :content)
     end
 end

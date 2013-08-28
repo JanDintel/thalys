@@ -1,8 +1,10 @@
 .heading
   .blogtitle
-    The Quietest Place
+    = cache do
+      = @blogname
 
 .row
   .small-9.small-centered.columns
-    = render @posts
+    = cache do
+      = render @posts
 

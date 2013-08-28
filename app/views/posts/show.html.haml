@@ -1,5 +1,6 @@
 .row
   .small-9.small-centered.columns
-    = render @post
+    = cache do
+      = render @post
 
     = render 'comments'

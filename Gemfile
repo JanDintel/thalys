@@ -13,6 +13,7 @@ gem 'haml'
 gem 'devise'
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'redcarpet'
+gem 'puma'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
