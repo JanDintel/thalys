@@ -3,7 +3,12 @@
     The Quietest Place
 
 .row
-  .small-9.small-centered.columns
+  .small-4.columns.small-offset-8.top-space-10
+    %span.has-tip.tip-top{"data-tooltip" => "", title: "a scientist by day, a 'mother' after work, a partner by night - and everything that comes with it."} About The Quietest Place
+
+.row
+  .small-9.columns.small-centered
     = cache do
       = render @posts
 
+  
