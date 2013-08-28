@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order("created_at DESC")
-    Properties.first ? @blogname = Properties.first.name : @blogname = ''
+    #Properties.first ? @blogname = Properties.first.name : @blogname = ''
   end
 
   def show
