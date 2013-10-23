@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'haml'
 gem 'devise'
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'zurb-foundation'
 gem 'redcarpet'
 gem 'puma'
 
@@ -18,6 +18,7 @@ group :test do
   gem 'spring'
   gem 'minitest', '~> 4.7'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'coveralls', require: false
 end
 
 group :test, :development do
