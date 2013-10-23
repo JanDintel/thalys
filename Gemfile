@@ -17,6 +17,7 @@ gem 'puma'
 group :test do
   gem 'spring'
   gem 'minitest', '~> 4.7'
+  gem 'minitest-rails'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'coveralls', require: false
 end
